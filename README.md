@@ -28,7 +28,7 @@ The notebook split each sentence into propositions based on predicates from the 
 
 #### 2. Argument identification: train the SVM model with all extract features from the training data, and evaluate it on test data. The result is visible in evaluation_results.ipynb
 
-#### 3. Based on the prediction by the first classifier, extract instances that have been assigned an “ARG” label and save as corresponding conll files in the data directory:
+#### 3. Based on the prediction by the first classifier, extract instances that have been assigned a “valid argument” label and save as corresponding conll files in the data directory:
 - data/features and gold label for argument classification/train.conll
 - data/features and gold label for argument classification/test.conll
 
