@@ -14,7 +14,7 @@ The notebook split each sentence into propositions based on predicates from the 
 - data/preprocessed data/test.conll
 
 ### main.py
-1. The script extracts features and labels for argument identification from the preprocessed data by calling several functions from feature_extraction.py and save as corresponding conll files in the data directory:
+1.The script extracts features and labels for argument identification from the preprocessed data by calling several functions from feature_extraction.py and save as corresponding conll files in the data directory:
 - data/features and gold label for argument identification/train.conll
 - data/features and gold label for argument identification/test.conll
 
