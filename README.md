@@ -14,11 +14,11 @@ The notebook split each sentence into propositions based on predicates from the 
 - data/preprocessed data/test.conll
 
 ### main.py
-1. extract features and labels for argument identification from the preprocessed data by calling several functions from feature_extraction.py and save as corresponding conll files in the data directory:
+#### 1. extract features and labels for argument identification from the preprocessed data by calling several functions from feature_extraction.py and save as corresponding conll files in the data directory:
 - data/features and gold label for argument identification/train.conll
 - data/features and gold label for argument identification/test.conll
 
-There are 6 features selected to carry out the argument identification task:
+**There are 6 features selected to carry out the argument identification task:**
 - Token
 - Lemma of each token
 - POS of each token
@@ -26,15 +26,15 @@ There are 6 features selected to carry out the argument identification task:
 - Lemma of predicate
 - Voice of predicate
 
-2. Argument identification: train the SVM model with all extract features from the training data, and evaluate it on test data. The result is visible in evaluation_results.ipynb
+#### 2. Argument identification: train the SVM model with all extract features from the training data, and evaluate it on test data. The result is visible in evaluation_results.ipynb
 
-3. Based on the prediction by the first classifier, extract instances that have been assigned an “ARG” label and save as corresponding conll files in the data directory:
+#### 3. Based on the prediction by the first classifier, extract instances that have been assigned an “ARG” label and save as corresponding conll files in the data directory:
 - data/features and gold label for argument classification/train.conll
 - data/features and gold label for argument classification/test.conll
 
-4. Argument classification: train the SVM model with all extract features from the training data, and evaluate it on test data. The result is visible in evaluation_results.ipynb
+#### 4. Argument classification: train the SVM model with all extract features from the training data, and evaluate it on test data. The result is visible in evaluation_results.ipynb
 
-5. The final output of the system (i.e the predictions) on the test set is saved in the data directory:
+#### 5. The final output of the system (i.e the predictions) on the test set is saved in the data directory:
 - data/system output/predictions on testset.conll
 
 ### evaluation_results.ipynb
