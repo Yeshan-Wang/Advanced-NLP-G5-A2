@@ -28,7 +28,7 @@ The script performs two tasks: Argument identification and Argument classificati
 - invalid argument: gold labels that do not contain keyword of 'ARG'
 - valid argument: gold labels that contain keyword of 'ARG'
 
-#### 1.2. train the Logistic Regression classifier with all extract features from the training data, and evaluate it on test data. The evaluation result is visible in evaluation_results.ipynb
+#### 1.2. train a Logistic Regression classifier with all extract features from the training data, and evaluate it on test data. The evaluation result is visible in evaluation_results.ipynb
 
 ### 2. Argument classification
 #### 2.1. extract training instances that have a “valid argument” label in training set, replace the binary labels with the original gold labels for argument classification and save as corresponding conll files in the data directory:
@@ -45,7 +45,7 @@ The script performs two tasks: Argument identification and Argument classificati
 - Lemma of predicate
 - Voice of predicate
 
-#### 4. train the Logistic Regression classifier with all extract features from the training data, and evaluate it on test data. The evaluation result is visible in evaluation_results.ipynb
+#### 4. train a second Logistic Regression classifier with all extract features from the training data, and evaluate it on test data. The evaluation result is visible in evaluation_results.ipynb
 
 #### 5. The final output of the system (i.e the predictions) on the test set is saved in the data directory:
 - data/system output/predictions on testset.conll
