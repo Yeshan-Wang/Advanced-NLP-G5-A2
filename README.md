@@ -37,7 +37,7 @@ The script performs two tasks: Argument identification and Argument classificati
 #### 2.2. extract instances that have been predicted as a “valid argument” label in test set and save as corresponding conll files for argument classification:
 - data/argument classification/test.conll
 
-#### 2.3. extract features and labels for argument classification from the corresponding conll files for argument classification. There are 6 features selected to carry out the argument identification task: 
+#### 2.3. extract features and labels from the corresponding conll files for argument classification. There are 6 features selected to carry out the argument identification task: 
 - Token
 - Lemma of each token
 - POS of each token
