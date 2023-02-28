@@ -45,8 +45,6 @@ The script performs two tasks: Argument identification and Argument classificati
 - Lemma of predicate
 - Voice of predicate
 
-**The binary labels are replaced with the original gold labels for argument classification**
-
 #### 4. train the SVM model with all extract features from the training data, and evaluate it on test data. The evaluation result is visible in evaluation_results.ipynb
 
 #### 5. The final output of the system (i.e the predictions) on the test set is saved in the data directory:
