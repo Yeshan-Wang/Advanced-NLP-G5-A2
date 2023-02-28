@@ -27,8 +27,8 @@ The notebook split each sentence into propositions based on predicates from the 
 - Voice of predicate
 
 **Original gold labels are divided into binary labels for argument identification:**
-- invalid argument: gold labels that contain keyword of 'ARG'
-- valid argument: gold labels that do not contain keyword of 'ARG'
+- invalid argument: gold labels that do not contain keyword of 'ARG'
+- valid argument: gold labels that contain keyword of 'ARG'
 
 #### 2. Argument identification: train the SVM model with all extract features from the training data, and evaluate it on test data. The result is visible in evaluation_results.ipynb
 
