@@ -42,6 +42,6 @@ The notebook split each sentence into propositions based on predicates from the 
 - data/system output/predictions on testset.conll
 
 ### evaluation_results.ipynb
-load and run *main.py* in jupyter notebook to get evaluation results of argument identification and argument classification
+load and run **main.py** in jupyter notebook to get evaluation results of argument identification and argument classification
 
 
