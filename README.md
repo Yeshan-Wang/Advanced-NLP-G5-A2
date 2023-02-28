@@ -31,10 +31,10 @@ The script performs two tasks: Argument identification and Argument classificati
 #### 1.2. train the SVM model with all extract features from the training data, and evaluate it on test data. The evaluation result is visible in evaluation_results.ipynb
 
 ### 2. Argument classification
-#### 2.1. extract instances that have a “valid argument” label in training set and save as corresponding conll files for argument classification:
+#### 2.1. extract instances that have a “valid argument” label in training set, replace the binary labels with the original gold labels for argument classification and save as corresponding conll files in the data directory:
 - data/argument classification/train.conll
 
-#### 2.2. extract instances that have been predicted as a “valid argument” label in test set and save as corresponding conll files for argument classification:
+#### 2.2. extract instances that have been predicted as a “valid argument” label in test set, replace the binary labels with the original gold labels for argument classification and save as corresponding conll files in the data directory:
 - data/argument classification/test.conll
 
 #### 2.3. extract features and labels from the corresponding conll files for argument classification. There are 6 features selected to carry out the argument identification task: 
