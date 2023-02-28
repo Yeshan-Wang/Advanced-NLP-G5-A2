@@ -5,20 +5,18 @@ The code was carried out by Yeshan Wang and Payam Fakhraie during the course ‘
 - Pandas 1.5
 - Sklearn 1.2
 
-## Code
-All code and notebooks should be run in the following order:
+**All code and notebooks should be run in the following order:**
 
-### preprocessing.ipynb
+## preprocessing.ipynb (Estimated code running time: 54s)
 The notebook split each sentence into propositions based on predicates from the original data (so each instance has a single labeled argument structure) and save as corresponding conll files in the data directory:
 - data/preprocessed data/train.conll
 - data/preprocessed data/test.conll
 
-### main.py
-#### 1. extract features and labels for argument identification from the preprocessed data by calling several functions from feature_extraction.py and save as corresponding conll files in the data directory:
-- data/features and gold label for argument identification/train.conll
-- data/features and gold label for argument identification/test.conll
+## main.py
+The script performs two tasks: Argument identification and Argument classification.
 
-**There are 6 features selected to carry out the argument identification task:**
+### 1. Argument identification
+#### 1.1. extract features and labels for argument identification from the preprocessed test and train data by calling several functions from feature_extraction.py. There are 6 features selected to carry out the argument identification task:
 - Token
 - Lemma of each token
 - POS of each token
@@ -26,22 +24,35 @@ The notebook split each sentence into propositions based on predicates from the 
 - Lemma of predicate
 - Voice of predicate
 
-**Original gold labels are divided into binary labels for argument identification:**
+**The original gold labels are divided into binary labels for argument identification:**
 - invalid argument: gold labels that do not contain keyword of 'ARG'
 - valid argument: gold labels that contain keyword of 'ARG'
 
-#### 2. Argument identification: train the SVM model with all extract features from the training data, and evaluate it on test data. The result is visible in evaluation_results.ipynb
+#### 1.2. train the SVM model with all extract features from the training data, and evaluate it on test data. The evaluation result is visible in evaluation_results.ipynb
 
-#### 3. Based on the prediction by the first classifier, extract instances that have been assigned a “valid argument” label and save as corresponding conll files in the data directory:
+### 2. Argument classification
+#### 2.1. extract instances that have a “valid argument” label in training set and save as corresponding conll files for argument classification:
 - data/features and gold label for argument classification/train.conll
+
+#### 2.2. extract instances that have been predicted as a “valid argument” label in test set and save as corresponding conll files for argument classification:
 - data/features and gold label for argument classification/test.conll
 
-#### 4. Argument classification: train the SVM model with all extract features from the training data, and evaluate it on test data. The result is visible in evaluation_results.ipynb
+#### 2.3. extract features and labels for argument classification from the corresponding conll files for argument classification. There are 6 features selected to carry out the argument identification task: 
+- Token
+- Lemma of each token
+- POS of each token
+- Dependency relations
+- Lemma of predicate
+- Voice of predicate
+
+**The binary labels are replaced with the original gold labels for argument classification**
+
+#### 4. train the SVM model with all extract features from the training data, and evaluate it on test data. The evaluation result is visible in evaluation_results.ipynb
 
 #### 5. The final output of the system (i.e the predictions) on the test set is saved in the data directory:
 - data/system output/predictions on testset.conll
 
-### evaluation_results.ipynb
+## evaluation_results.ipynb (Estimated code running time: 132s)
 load and run **main.py** in jupyter notebook to get evaluation results of argument identification and argument classification
 
 
