@@ -26,7 +26,7 @@ The notebook split each sentence into propositions based on predicates from the 
 - Lemma of predicate
 - Voice of predicate
 
-**Original gold labels are divided into binary tags:**
+**Original gold labels are divided into binary labels for argument identification:**
 - invalid argument: gold labels that contain keyword of 'ARG'
 - valid argument: gold labels that do not contain keyword of 'ARG'
 
